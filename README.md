@@ -1,31 +1,77 @@
-# Kali WiFi Clone Detector
-   
-   A PyQt5-based tool for detecting potential rogue access points and WiFi clones in Kali Linux.
-   
-   ## Features
-   - Network scanning with iwlist
-   - Advanced scanning with airodump-ng
-   - Risk assessment for potential rogue APs
-   - Color-coded threat visualization
-   
-   ## Requirements
-   - Kali Linux
-   - Python 3.6+
-   - PyQt5
-   - aircrack-ng suite
-   - Root privileges
-   ## User Permissions
-   -Root Access: The user must run the program with sudo or as root because:
-   -Direct wireless interface access requires root privileges
-   -airodump-ng and other wireless tools require root access
-   -System interface configuration requires elevated permissions
-   ## Usage Requirements
-   -Legal Authorization: User must have explicit permission to scan the target networks (which you've confirmed you have)
-   -Physical Location: User should be within range of the wireless networks they want to scan
-   -Basic Understanding: Familiarity with wireless networks and security concepts
-   ## Runtime Notes
-   -The program automatically detects the first available wireless interface
-   -Temporary files are created in /tmp/ during advanced scans and cleaned up automatically
-   -Scans may take 10-30 seconds depending on network environment
-   -Interface may briefly go down during advanced scans as it switches to monitor mode
-   -Before running, ensure your wireless adapter is properly connected and recognized by the system with iwconfig.
+# 🔐 Kali WiFi Clone Detector
+
+A **PyQt5-based security tool** designed for **Kali Linux** to detect potential **Wi-Fi clone (Evil Twin) attacks** and rogue access points by analyzing wireless network behavior.
+
+This project is intended for **educational and authorized security testing purposes only**.
+
+---
+
+## 📌 Overview
+
+Wi-Fi Evil Twin attacks occur when an attacker creates a fake access point with the same SSID as a legitimate network.  
+This tool helps identify such threats by combining **basic scanning** and **advanced monitor-mode analysis**.
+
+The application provides a **graphical interface** to visualize detected networks and highlight potential risks.
+
+---
+
+## ✨ Features
+
+- 📡 **Basic Wi-Fi scanning** using `iwlist`
+- 🕵️ **Advanced scanning** using `airodump-ng`
+- 🚨 **Detection of duplicate SSIDs with different BSSIDs**
+- 🎯 **Risk assessment for potential rogue access points**
+- 🎨 **Color-coded threat visualization**
+- 🖥️ **User-friendly PyQt5 GUI**
+- 🧹 Automatic cleanup of temporary scan files
+
+---
+
+## 🖥️ System Requirements
+
+### Operating System
+- **Kali Linux** (recommended)  
+  *(Other Linux distributions may work if required tools are available)*
+
+### Python
+- **Python 3.6 or higher**
+
+### Privileges
+- **Root access required**
+  - Wireless interface configuration
+  - Monitor mode activation
+  - `airodump-ng` execution
+
+---
+
+## 📶 Hardware Requirements
+
+### Wireless Network Interface Card (WNIC)
+- Must support **monitor mode**
+- Examples:
+  - Internal wireless cards (chipset dependent)
+  - External USB adapters (e.g., **Alfa AWUS036ACS**)
+
+> ⚠️ Not all wireless adapters support monitor mode. Verify compatibility before use.
+
+### System Resources
+- Minimum **2 GB RAM** (4 GB recommended)
+- Sufficient disk space for temporary scan files
+
+---
+
+## 📦 Software Dependencies
+
+### Core Dependencies
+- **PyQt5** – GUI framework
+- **iwlist** – Basic wireless scanning (usually pre-installed on Kali)
+- **aircrack-ng** – Advanced wireless analysis
+- **nmap** – Additional network discovery features
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Update system
+```bash
+sudo apt update
