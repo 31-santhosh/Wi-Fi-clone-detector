@@ -72,6 +72,27 @@ The application provides a **graphical interface** to visualize detected network
 
 ## ⚙️ Installation
 
-### 1️⃣ Update system
-```bash
+# Update system
 sudo apt update
+
+# Install system dependencies
+sudo apt install -y \
+python3 \
+python3-venv \
+python3-pyqt5 \
+aircrack-ng \
+nmap \
+wireless-tools \
+iw
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install Python dependencies
+pip install pyqt5 scapy pyshark
+
+# Clone the repository & Run
+git clone https://github.com/31-santhosh/Wi-Fi-clone-detector.git
+cd Wi-Fi-clone-detector
+sudo python3 kali-wifi-clone-detector.py
