@@ -1,81 +1,33 @@
-# 🔐 Kali WiFi Clone Detector
+Perfect 👍 I understand exactly what you want now.
 
-A **PyQt5-based security tool** designed for **Kali Linux** to detect potential **Wi-Fi clone (Evil Twin) attacks** and rogue access points by analyzing wireless network behavior.
+You want your README installation section to look like the Zphisher style:
 
-This project is intended for **educational and authorized security testing purposes only**.
+Clean bullets
 
----
+Short sentences
 
-## 📌 Overview
+Separate copy-paste code blocks
 
-Wi-Fi Evil Twin attacks occur when an attacker creates a fake access point with the same SSID as a legitimate network.  
-This tool helps identify such threats by combining **basic scanning** and **advanced monitor-mode analysis**.
+Very readable & professional
 
-The application provides a **graphical interface** to visualize detected networks and highlight potential risks.
+Below is exact Markdown you can paste into your README.md.
+It will look almost identical in style to the screenshot you showed.
 
----
+🚀 Installation
 
-## ✨ Features
+Clone this repository
 
-- 📡 **Basic Wi-Fi scanning** using `iwlist`
-- 🕵️ **Advanced scanning** using `airodump-ng`
-- 🚨 **Detection of duplicate SSIDs with different BSSIDs**
-- 🎯 **Risk assessment for potential rogue access points**
-- 🎨 **Color-coded threat visualization**
-- 🖥️ **User-friendly PyQt5 GUI**
-- 🧹 Automatic cleanup of temporary scan files
+git clone https://github.com/31-santhosh/Wi-Fi-clone-detector.git
 
----
 
-## 🖥️ System Requirements
+Navigate to the project directory
 
-### Operating System
-- **Kali Linux** (recommended)  
-  *(Other Linux distributions may work if required tools are available)*
+cd Wi-Fi-clone-detector
 
-### Python
-- **Python 3.6 or higher**
 
-### Privileges
-- **Root access required**
-  - Wireless interface configuration
-  - Monitor mode activation
-  - `airodump-ng` execution
+Install system dependencies
 
----
-
-## 📶 Hardware Requirements
-
-### Wireless Network Interface Card (WNIC)
-- Must support **monitor mode**
-- Examples:
-  - Internal wireless cards (chipset dependent)
-  - External USB adapters (e.g., **Alfa AWUS036ACS**)
-
-> ⚠️ Not all wireless adapters support monitor mode. Verify compatibility before use.
-
-### System Resources
-- Minimum **2 GB RAM** (4 GB recommended)
-- Sufficient disk space for temporary scan files
-
----
-
-## 📦 Software Dependencies
-
-### Core Dependencies
-- **PyQt5** – GUI framework
-- **iwlist** – Basic wireless scanning (usually pre-installed on Kali)
-- **aircrack-ng** – Advanced wireless analysis
-- **nmap** – Additional network discovery features
-
----
-
-## ⚙️ Installation
-
-# Update system
 sudo apt update
-
-# Install system dependencies
 sudo apt install -y \
 python3 \
 python3-venv \
@@ -85,14 +37,32 @@ nmap \
 wireless-tools \
 iw
 
-# Create and activate virtual environment
+
+Create and activate a virtual environment (recommended)
+
 python3 -m venv venv
 source venv/bin/activate
 
-# Install Python dependencies
+
+Install Python dependencies
+
 pip install pyqt5 scapy pyshark
 
-# Clone the repository & Run
-git clone https://github.com/31-santhosh/Wi-Fi-clone-detector.git
-cd Wi-Fi-clone-detector
-sudo python3 kali-wifi-clone-detector.py
+▶️ Run the Tool
+
+Run with root privileges
+
+sudo venv/bin/python clone_hack.py
+
+🔍 Verify Wireless Adapter
+iwconfig
+
+📝 Notes
+
+Root privileges are required for wireless interface access
+
+A monitor-mode capable Wi-Fi adapter is required for advanced scanning
+
+Temporary files are created in /tmp and cleaned automatically
+
+Scan time may vary depending on nearby networks
