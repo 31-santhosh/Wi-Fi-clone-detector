@@ -86,13 +86,14 @@ nmap \
 wireless-tools \
 iw
 
-# Clone the repository
-git clone https://github.com/31-santhosh/Wi-Fi-clone-detector.git
-cd Wi-Fi-clone-detector
-
 # Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
 # Install Python dependencies
 pip install pyqt5 scapy pyshark
+
+# Clone the repository & Run
+git clone https://github.com/31-santhosh/Wi-Fi-clone-detector.git
+cd Wi-Fi-clone-detector
+sudo python3 kali-wifi-clone-detector.py
